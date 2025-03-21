@@ -200,7 +200,7 @@ export default function SlideSections() {
 
           <div className="flex items-center justify-between -mt-[60px]">
             <p className="text-2xl font-bold">This Yoga Support by</p>
-            <div className="flex overflow-scroll w-[75%]">
+            <div className="flex overflow-hidden w-[75%]">
               <Image
                 src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/snowflake-logo-recv2EQNlU3plB13W.png"
                 width={200}
