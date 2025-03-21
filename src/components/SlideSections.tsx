@@ -83,7 +83,7 @@ export default function SlideSections() {
           />
         </div>
       </section>
-      <section className="bg-white sticky left-0 top-0 z-10 pt-3">
+      <section className="bg-white sticky left-0 top-0 z-10 pt-1">
         <h1 className="text-center text-5xl font-bold my-20">
           Our Yoga Instructors
         </h1>
@@ -150,7 +150,7 @@ export default function SlideSections() {
           </div>
         </div>
       </section>
-      <section className="bg-white sticky left-0 top-0 z-20 p-30 h-screen">
+      <section className="bg-white sticky left-0 top-0 z-20 px-30 pt-5 h-screen">
         <Image
           src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/Group-4.png"
           width={100}
