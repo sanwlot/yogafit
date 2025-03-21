@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { FaPlay } from 'react-icons/fa'
 import FancyBtn from './FancyBtn'
+import Divider from './Divider'
 
 export default function SlideSections() {
   return (
@@ -165,15 +166,21 @@ export default function SlideSections() {
                 Donec pede justo fringilla. aliquet nec vulputate eget arcu In
                 enim justo.
               </p>
-              <div className="flex flex-col gap-4 font-bold">
-                <p className="flex justify-between">
-                  <span>Monday - Friday</span> <span>09.00 - 20.00</span>
+              <div className="flex flex-col gap-4 font-bold w-[450px]">
+                <p className="flex justify-between gap-3 items-center">
+                  <span className="w-[300px]">Monday - Friday</span>
+                  <Divider />
+                  <span className="w-[250px]">09.00 - 20.00</span>
                 </p>
-                <p className="flex justify-between">
-                  <span>Saturday</span> <span>09.00 - 19.00</span>
+                <p className="flex justify-between gap-3 items-center">
+                  <span className="">Saturday</span>
+                  <Divider />
+                  <span className="w-[250px]">09.00 - 19.00</span>
                 </p>
-                <p className="flex justify-between">
-                  <span>Sunday</span> <span>09.00 - 15.00</span>
+                <p className="flex justify-between gap-3 items-center">
+                  <span>Sunday</span>
+                  <Divider />
+                  <span className="w-[250px] ">09.00 - 15.00</span>
                 </p>
               </div>
             </div>
