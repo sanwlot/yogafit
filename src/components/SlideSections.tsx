@@ -83,7 +83,7 @@ export default function SlideSections() {
           />
         </div>
       </section>
-      <section className="bg-white sticky left-0 top-0 z-10 p-30">
+      <section className="bg-white sticky left-0 top-0 z-10 pt-3">
         <h1 className="text-center text-5xl font-bold my-20">
           Our Yoga Instructors
         </h1>
