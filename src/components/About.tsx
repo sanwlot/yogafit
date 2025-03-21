@@ -26,7 +26,7 @@ export default function About() {
         <h2 className="font-bold text-4xl">
           Connecting Mind, Body, and Spirit through
         </h2>
-        <p>
+        <p className="w-[500px]">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo. Ligula eget dolor aenean massa cum sociis natoque.
         </p>
