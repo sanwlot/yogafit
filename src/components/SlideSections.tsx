@@ -167,21 +167,21 @@ export default function SlideSections() {
                 enim justo.
               </p>
               <div className="flex flex-col gap-4 font-bold w-[450px]">
-                <p className="flex justify-between gap-3 items-center">
+                <div className="flex justify-between gap-3 items-center">
                   <span className="w-[300px]">Monday - Friday</span>
                   <Divider />
                   <span className="w-[250px]">09.00 - 20.00</span>
-                </p>
-                <p className="flex justify-between gap-3 items-center">
+                </div>
+                <div className="flex justify-between gap-3 items-center">
                   <span className="">Saturday</span>
                   <Divider />
                   <span className="w-[250px]">09.00 - 19.00</span>
-                </p>
-                <p className="flex justify-between gap-3 items-center">
+                </div>
+                <div className="flex justify-between gap-3 items-center">
                   <span>Sunday</span>
                   <Divider />
                   <span className="w-[250px] ">09.00 - 15.00</span>
-                </p>
+                </div>
               </div>
             </div>
             <div className="relative">
