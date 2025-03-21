@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { FaPlay } from 'react-icons/fa'
+import FancyBtn from './FancyBtn'
 
 export default function SlideSections() {
   return (
@@ -6,7 +8,7 @@ export default function SlideSections() {
       <section className="sticky left-0 top-0 p-10 flex justify-center items-center gap-2">
         <div className="flex flex-col gap-7 p-20">
           <h1 className="text-5xl w-[420px] font-bold">
-            Trusted by Thousands Client
+            Trusted by Thousands Clients
           </h1>
           <p className="w-[420px]">
             Donec pede justo fringilla vel aliquet. nec vulputate eget arcu In
@@ -145,6 +147,121 @@ export default function SlideSections() {
               <p className="text-[#18CBE4]">Yoga Instructor</p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="bg-white sticky left-0 top-0 z-20 p-30 h-screen">
+        <Image
+          src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/Group-4.png"
+          width={100}
+          height={100}
+          alt=""
+          className=" relative -left-25"
+        />
+        <div className="bg-[#d9acf54f]  p-10 rounded-tr-4xl rounded-bl-4xl">
+          <div className="flex justify-between">
+            <div className="flex flex-col justify-start gap-10">
+              <p className="text-3xl font-bold">Yogafit Working Hour</p>
+              <p className="text-[#333333b0] w-[400px]">
+                Donec pede justo fringilla. aliquet nec vulputate eget arcu In
+                enim justo.
+              </p>
+              <div className="flex flex-col gap-4 font-bold">
+                <p className="flex justify-between">
+                  <span>Monday - Friday</span> <span>09.00 - 20.00</span>
+                </p>
+                <p className="flex justify-between">
+                  <span>Saturday</span> <span>09.00 - 19.00</span>
+                </p>
+                <p className="flex justify-between">
+                  <span>Sunday</span> <span>09.00 - 15.00</span>
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <Image
+                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/people-doing-yoga-on-the-beach-e1681803021989.jpg"
+                width={600}
+                height={600}
+                alt=""
+                className="relative bottom-30 rounded-tl-4xl rounded-br-4xl"
+              />
+              <div className="rounded-tr-4xl cursor-pointer grid place-content-center absolute left-0 bottom-30 w-20 h-20 bg-white">
+                <FaPlay />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between -mt-[60px]">
+            <p className="text-2xl font-bold">This Yoga Support by</p>
+            <div className="flex overflow-scroll w-[75%]">
+              <Image
+                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/snowflake-logo-recv2EQNlU3plB13W.png"
+                width={200}
+                height={200}
+                alt=""
+                className=""
+              />
+              <Image
+                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/inspire-logo-recwek1xLvPBRvnpm.png"
+                width={200}
+                height={200}
+                alt=""
+                className=""
+              />
+              <Image
+                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/nextmove-recXWUjUgwS26HIuj.png"
+                width={200}
+                height={200}
+                alt=""
+                className=""
+              />
+              <Image
+                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/pinpoint-reco6Ys7nWU8RWf7m.png"
+                width={200}
+                height={200}
+                alt=""
+                className=""
+              />
+              <Image
+                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/proline-logo-recM5LCJ6omCJzS0g.png"
+                width={200}
+                height={200}
+                alt=""
+                className=""
+              />
+              <Image
+                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/sitemark-logo-recr9fsEK43RqqITU.png"
+                width={200}
+                height={200}
+                alt=""
+                className=""
+              />
+              <Image
+                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/Waveless-logo-recc8dyXMtZC2sJ8h.png"
+                width={200}
+                height={200}
+                alt=""
+                className=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-teal-950 sticky left-0 top-0 z-30 flex justify-between items-center p-30 h-[60.2vh]">
+        <div className="text-white flex flex-col gap-10 items-start">
+          <h1 className="text-5xl leading-14 font-bold w-[550px]">
+            Want to Improve Your Well-Being? Start With a Free Class Today!
+          </h1>
+          <FancyBtn href="#">Get a Free Class</FancyBtn>
+        </div>
+        <div>
+          <Image
+            src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/cheerful-young-woman-with-yoga-NPYKHGK.png"
+            width={500}
+            height={100}
+            alt=""
+            className="relative bottom-11"
+          />
         </div>
       </section>
     </div>

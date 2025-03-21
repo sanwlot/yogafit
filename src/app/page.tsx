@@ -1,5 +1,5 @@
-// import Image from 'next/image'
 import About from '@/components/About'
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import SlideSections from '@/components/SlideSections'
@@ -19,7 +19,7 @@ export default function Home() {
         <SlideSections />
       </main>
 
-      <footer>{/* <h1>Footer</h1> */}</footer>
+      <Footer />
     </div>
   )
 }
