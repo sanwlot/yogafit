@@ -36,7 +36,15 @@ export default function YogaClasses() {
   )
 }
 
-function Card({ title, cardImgSrc, designImgSrc }) {
+function Card({
+  title,
+  cardImgSrc,
+  designImgSrc,
+}: {
+  title: string
+  cardImgSrc: string
+  designImgSrc: string
+}) {
   return (
     <div className="w-[300px] shadow-2xl rounded-bl-4xl rounded-tr-4xl">
       <div>
