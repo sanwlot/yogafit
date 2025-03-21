@@ -1,6 +1,11 @@
 import React from 'react'
 
-export default function FancyBtn({ href, children }) {
+interface FancyBtnProps {
+  href: string
+  children: React.ReactNode
+}
+
+export default function FancyBtn({ href, children }: FancyBtnProps) {
   return (
     <a
       href={href}
