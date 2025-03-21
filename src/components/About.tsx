@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import FancyBtn from './FancyBtn'
 
 export default function About() {
   return (
@@ -59,12 +60,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <a
-          href="#"
-          className="bg-[#18CBE4] text-white py-3 px-5 rounded-tl-xl rounded-br-xl"
-        >
-          About Us
-        </a>
+        <FancyBtn href={'#'}>About Us</FancyBtn>
       </div>
     </section>
   )

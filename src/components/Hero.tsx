@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { FaPhone } from 'react-icons/fa'
 import { IoIosPlay } from 'react-icons/io'
+import FancyBtn from './FancyBtn'
+import FancyTxt from './FancyTxt'
 
 export default function Hero() {
   return (
@@ -47,15 +49,10 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex gap-8 items-center">
-            <a
-              href="#"
-              className="bg-[#18CBE4] text-white py-3 px-5 rounded-tl-xl rounded-br-xl"
-            >
-              Book Class
-            </a>
+            <FancyBtn href={'#'}>Book Class</FancyBtn>
             <a href="#" className="text-[#18CBE4] flex items-center gap-2 ">
               <FaPhone />
-              <span className="border-b border-b-[#18CBE4]">Contact Us</span>
+              <FancyTxt>Contact Us</FancyTxt>
             </a>
           </div>
         </div>
@@ -78,7 +75,7 @@ export default function Hero() {
             tempor.
           </p>
           <a href="#" className="text-[#18CBE4] flex items-center gap-2 ">
-            <span className="border-b border-b-[#18CBE4]">Lear More</span>
+            <FancyTxt>Lear More</FancyTxt>
           </a>
         </div>
         <div className="w-[300px] flex justify-center items-center flex-col gap-5">
@@ -98,7 +95,7 @@ export default function Hero() {
             tempor.
           </p>
           <a href="#" className="text-[#18CBE4] flex items-center gap-2 ">
-            <span className="border-b border-b-[#18CBE4]">Lear More</span>
+            <FancyTxt>Lear More</FancyTxt>
           </a>
         </div>
         <div className="w-[300px] flex justify-center items-center flex-col gap-5">
@@ -118,7 +115,7 @@ export default function Hero() {
             tempor.
           </p>
           <a href="#" className="text-[#18CBE4] flex items-center gap-2 ">
-            <span className="border-b border-b-[#18CBE4]">Lear More</span>
+            <FancyTxt>Lear More</FancyTxt>
           </a>
         </div>
       </div>

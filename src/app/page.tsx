@@ -2,6 +2,7 @@
 import About from '@/components/About'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import YogaClasses from '@/components/YogaClasses'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         </h1>
         <Hero />
         <About />
+        <YogaClasses />
       </main>
 
       <footer>
