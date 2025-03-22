@@ -39,7 +39,9 @@ export default function Footer() {
           className="relative flex text-white p-10 flex-col justify-end bg-cover bg-center m-5 min-h-[400px] w-full md:h-[70vh] md:w-[30vw] rounded-tr-4xl rounded-bl-4xl shadow-lg"
         >
           <p className="text-[#18CBE4] font-semibold tracking-wide">News</p>
-          <p className={`${rajdhani.className} text-2xl font-bold`}>
+          <p
+            className={`${rajdhani.className} text-2xl font-bold hover:text-[#18CBE4] `}
+          >
             The Science Behind Yoga: How It Affects Your Brain And Body
           </p>
           <p className="opacity-80">April 25, 2023</p>
@@ -75,7 +77,9 @@ export default function Footer() {
                 <p className="text-[#18CBE4] font-semibold tracking-wide">
                   News
                 </p>
-                <p className={`${rajdhani.className} text-xl font-bold`}>
+                <p
+                  className={`${rajdhani.className} hover:text-[#18CBE4] text-xl font-bold`}
+                >
                   {article.title}
                 </p>
                 <p className="text-gray-500">{article.date}</p>
@@ -122,7 +126,7 @@ export default function Footer() {
               type="email"
               placeholder="Enter Your Email"
             />
-            <button className="p-4 rounded-tr-xl bg-[#18CBE4]">
+            <button className="p-4 rounded-tr-xl cursor-pointer bg-[#18CBE4] transition-all duration-500 ease-in-out hover:shadow-2xl hover:bg-[#58b0bb]">
               Subscribe
             </button>
           </div>

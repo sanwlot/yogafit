@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import { FaPlay } from 'react-icons/fa'
+import { FaFacebookSquare, FaInstagram, FaPlay } from 'react-icons/fa'
 import FancyBtn from './FancyBtn'
 import Divider from './Divider'
 import { Rajdhani } from 'next/font/google'
+import { FaXTwitter } from 'react-icons/fa6'
 const rajdhani = Rajdhani({
   weight: ['400', '700', '600'],
   subsets: ['latin'],
@@ -95,7 +96,7 @@ export default function SlideSections() {
           Our Yoga Instructors
         </h1>
         <div className="flex flex-wrap justify-center gap-30 p-10">
-          <div className="relative w-[300px] text-center">
+          <div className="group relative w-[300px] text-center">
             <Image
               src="/images/logo-big.png"
               width={300}
@@ -110,6 +111,21 @@ export default function SlideSections() {
               alt="young woman practicing yogar"
               className="mb-4 absolute left-0 top-0 float-animation"
             />
+
+            <div className="hidden group-hover:block relative">
+              <ul className="flex justify-center absolute bottom-0 left-7 gap-2 text-2xl ml-10 text-[#18CBE4] ">
+                <li className="text-white p-3 rounded-full cursor-pointer bg-[#18CBE4] hover:bg-[#5fb0bb]">
+                  <FaFacebookSquare className="transition-all duration-500 ease-in-out  hover:animate-ping" />
+                </li>
+                <li className="text-white p-3 rounded-full cursor-pointer bg-[#18CBE4] hover:bg-[#5fb0bb]">
+                  <FaXTwitter className="transition-all duration-500 ease-in-out  hover:animate-ping" />
+                </li>
+                <li className="text-white p-3 rounded-full cursor-pointer bg-[#18CBE4] hover:bg-[#5fb0bb]">
+                  <FaInstagram className="transition-all duration-500 ease-in-out  hover:animate-ping" />
+                </li>
+              </ul>
+            </div>
+
             <div className="flex flex-col gap-2.5">
               <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
                 Jessica Hobs
@@ -117,7 +133,7 @@ export default function SlideSections() {
               <p className="text-[#18CBE4]">Yoga Instructor</p>
             </div>
           </div>
-          <div className="relative w-[300px] text-center">
+          <div className="group relative w-[300px] text-center">
             <Image
               src="/images/logo-big.png"
               width={300}
@@ -132,6 +148,19 @@ export default function SlideSections() {
               alt="young woman practicing yogar"
               className="mb-4 absolute left-0 top-0 float-animation"
             />
+            <div className="hidden group-hover:block relative">
+              <ul className="flex justify-center absolute bottom-0 left-7 gap-2 text-2xl ml-10 text-[#18CBE4] ">
+                <li className="text-white p-3 rounded-full cursor-pointer bg-[#18CBE4] hover:bg-[#5fb0bb]">
+                  <FaFacebookSquare className="transition-all duration-500 ease-in-out  hover:animate-ping" />
+                </li>
+                <li className="text-white p-3 rounded-full cursor-pointer bg-[#18CBE4] hover:bg-[#5fb0bb]">
+                  <FaXTwitter className="transition-all duration-500 ease-in-out  hover:animate-ping" />
+                </li>
+                <li className="text-white p-3 rounded-full cursor-pointer bg-[#18CBE4] hover:bg-[#5fb0bb]">
+                  <FaInstagram className="transition-all duration-500 ease-in-out  hover:animate-ping" />
+                </li>
+              </ul>
+            </div>
             <div className="flex flex-col gap-2.5">
               <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
                 Christina Rose
@@ -139,7 +168,7 @@ export default function SlideSections() {
               <p className="text-[#18CBE4]">Yoga Instructor</p>
             </div>
           </div>
-          <div className="relative w-[300px] text-center">
+          <div className="group relative w-[300px] text-center">
             <Image
               src="/images/logo-big.png"
               width={300}
@@ -154,6 +183,19 @@ export default function SlideSections() {
               alt="young woman practicing yogar"
               className="mb-4 absolute left-0 top-0 float-animation"
             />
+            <div className="hidden group-hover:block relative">
+              <ul className="flex justify-center absolute bottom-0 left-7 gap-2 text-2xl ml-10 text-[#18CBE4] ">
+                <li className="text-white p-3 rounded-full cursor-pointer bg-[#18CBE4] hover:bg-[#5fb0bb]">
+                  <FaFacebookSquare className="transition-all duration-500 ease-in-out  hover:animate-ping" />
+                </li>
+                <li className="text-white p-3 rounded-full cursor-pointer bg-[#18CBE4] hover:bg-[#5fb0bb]">
+                  <FaXTwitter className="transition-all duration-500 ease-in-out  hover:animate-ping" />
+                </li>
+                <li className="text-white p-3 rounded-full cursor-pointer bg-[#18CBE4] hover:bg-[#5fb0bb]">
+                  <FaInstagram className="transition-all duration-500 ease-in-out  hover:animate-ping" />
+                </li>
+              </ul>
+            </div>
             <div className="flex flex-col gap-2.5">
               <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
                 Hanny Wesley
@@ -207,7 +249,7 @@ export default function SlideSections() {
                 alt=""
                 className="xl:relative mt-10 xl:mt-0 xl:block min-w-[280px] bottom-30 rounded-tl-4xl rounded-br-4xl"
               />
-              <div className="hidden rounded-tr-4xl cursor-pointer xl:grid place-content-center absolute left-0 bottom-30 w-20 h-20 bg-white">
+              <div className="hidden rounded-tr-4xl cursor-pointer xl:grid place-content-center absolute left-0 bottom-30 w-20 h-20 bg-white transition-all duration-500 ease-in-out hover:bg-[#18CBE4] hover:text-white">
                 <FaPlay />
               </div>
             </div>
