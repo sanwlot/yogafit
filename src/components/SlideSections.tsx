@@ -1,10 +1,13 @@
+'use client'
+
 import Image from 'next/image'
 import { FaFacebookSquare, FaInstagram, FaPlay } from 'react-icons/fa'
 import FancyBtn from './FancyBtn'
 import Divider from './Divider'
 import { Rajdhani } from 'next/font/google'
 import { FaXTwitter } from 'react-icons/fa6'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 const rajdhani = Rajdhani({
   weight: ['400', '700', '600'],
@@ -111,29 +114,81 @@ export default function SlideSections() {
 
         <div className="flex flex-wrap justify-center items-center content-center gap-8">
           <ReviewCard
-            review="I suffered from chronic back pain, but after practicing yoga regularly, I've noticed a significant decrease in discomfort."
-            name="Alex Peterson"
-            occupation="Web Developer"
-            src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/mid-adult-man-in-office-arms-folded-looking-at-camera-smiling-e1681372704313-150x150.jpg"
+            timeout={7000}
+            reviews={[
+              {
+                review:
+                  'This yoga studio has changed my life! The classes are well-structured, and the instructors are incredibly supportive.',
+                src: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/front-view-looking-at-camera-young-woman-farmer-in-a-garden-with-trees-stands-smiling-brunette--e1681372418107-150x150.jpg', // Unsplash Image
+                name: 'Cherie Jaxson',
+                occupation: 'Wellness Coach',
+              },
+              {
+                review:
+                  'The best yoga experience I’ve ever had! The breathing exercises and meditation techniques have helped me manage my stress.',
+                src: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/mid-adult-man-in-office-arms-folded-looking-at-camera-smiling-e1681372704313-150x150.jpg', // Unsplash Image
+                name: 'Ron H Jr',
+                occupation: 'Fitness Trainer',
+              },
+            ]}
             special
           />
           <ReviewCard
-            review="Yoga has become a form of self-expression for me, allowing me to move my body in ways that feel natural and freeing."
-            name="Paul Goodman"
-            occupation="Web Designer"
-            src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/portrait-of-male-athlete-listening-music-on-headphones-in-the-rain-and-looking-at-camera--e1681376029830-150x150.jpg"
+            timeout={6000}
+            reviews={[
+              {
+                review:
+                  'A peaceful and welcoming environment! The instructors tailor the sessions for all levels, making it easy to follow along.',
+                src: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/charming-asian-woman-with-a-smile-standing-holding-tablet-and-confidently-looking-at-the-camera-in-e1681376439660-150x150.jpg', // Unsplash Image
+                name: 'Emma Smith',
+                occupation: 'Musician',
+              },
+              {
+                review:
+                  'I feel more energetic and balanced after every session! The guided poses and stretches have improved my flexibility significantly.',
+                src: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/portrait-of-male-athlete-listening-music-on-headphones-in-the-rain-and-looking-at-camera--e1681376029830-150x150.jpg', // Unsplash Image
+                name: 'Saul Goodman',
+                occupation: 'Yoga Enthusiast',
+              },
+            ]}
           />
           <ReviewCard
-            review="Yoga has helped me become more mindful and present in my daily life, leading to increased happiness and fulfillment. I highly recommand it."
-            name="Sylvia Santos"
-            occupation="Teacher"
-            src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/head-shot-portrait-of-a-young-blonde-woman-looking-at-the-camera-e1681376724284-150x150.jpg"
+            timeout={8000}
+            reviews={[
+              {
+                review:
+                  'The yoga sessions are so relaxing! I feel more connected to my mind and body after every class.',
+                src: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/young-happy-woman-at-refrigerated-section-of-supermarket-looking-at-camera--e1681373784115-150x150.jpg',
+                name: 'Adam Young',
+                occupation: 'Wellness Coach',
+              },
+              {
+                review:
+                  'A perfect place for both beginners and advanced practitioners. The instructors are patient and encouraging.',
+                src: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/outdoor-portrait-of-african-american-man-with-crossed-arms-looking-at-camera-e1681376874850-150x150.jpg',
+                name: 'Butters',
+                occupation: 'Fitness Trainer',
+              },
+            ]}
           />
           <ReviewCard
-            review="I used to have trouble sleeping, but after incorporating yoga into my nightly routine, I fall asleep faster and sleep more soundly."
-            name="Madi Lords"
-            occupation="Chef"
-            src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/charming-asian-woman-with-a-smile-standing-holding-tablet-and-confidently-looking-at-the-camera-in-e1681376439660-150x150.jpg"
+            timeout={9000}
+            reviews={[
+              {
+                review:
+                  'I started yoga to relieve stress, and it has been a game changer! The guided breathing exercises are my favorite part.',
+                src: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/head-shot-portrait-of-a-young-blonde-woman-looking-at-the-camera-e1681376724284-150x150.jpg',
+                name: 'Leon Kennedy',
+                occupation: 'Police Officer',
+              },
+              {
+                review:
+                  'The energy in this yoga class is unmatched! Every session leaves me feeling rejuvenated and at peace.',
+                src: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/portrait-of-asian-woman-sell-vase-product-online-and-looking-at-camera--e1681372894417-150x150.jpg',
+                name: 'Randy Marsh',
+                occupation: 'Yoga Enthusiast',
+              },
+            ]}
           />
         </div>
       </section>
@@ -362,9 +417,9 @@ export default function SlideSections() {
             className="flex items-center justify-between"
           >
             <p className="xl:text-2xl text-lg font-bold text-[#003342]">
-              This Yoga Support by
+              This Yoga Supported by
             </p>
-            <div className="flex overflow-hidden w-[75%]">
+            {/* <div className="flex overflow-hidden w-[75%]">
               <Image
                 src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/snowflake-logo-recv2EQNlU3plB13W.png"
                 width={200}
@@ -414,7 +469,9 @@ export default function SlideSections() {
                 alt=""
                 className=""
               />
-            </div>
+            </div> */}
+
+            <BrandSlider />
           </motion.div>
         </div>
       </section>
@@ -466,13 +523,94 @@ interface ReviewCardProps {
   special?: boolean
 }
 
-function ReviewCard({
-  review,
-  src,
-  name,
-  occupation,
-  special,
-}: ReviewCardProps) {
+// function ReviewCard({
+//   review,
+//   src,
+//   name,
+//   occupation,
+//   special,
+// }: ReviewCardProps) {
+//   return (
+//     <section
+//       style={{
+//         backgroundImage: special ? "url('/images/pattern.png')" : '',
+//         backgroundColor: special ? '#d9acf59a' : 'white',
+//         backgroundRepeat: 'no-repeat',
+//         backgroundPosition: 'right',
+//         backgroundSize: 'contain',
+//       }}
+//       className="rounded-tr-4xl rounded-bl-4xl w-[300px] p-10 bg-white flex flex-col gap-10 shadow-2xl"
+//     >
+//       <p>"{review}"</p>
+//       <div className="flex gap-6">
+//         <Image
+//           src={src}
+//           width={50}
+//           height={50}
+//           alt="user"
+//           className="rounded-full"
+//         />
+//         <div>
+//           <p
+//             className={`${rajdhani.className} text-xl font-bold text-[#003342]`}
+//           >
+//             {name}
+//           </p>
+//           <p className="text-[#333b]">{occupation}</p>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
+const logos = [
+  'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/snowflake-logo-recv2EQNlU3plB13W.png',
+  'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/inspire-logo-recwek1xLvPBRvnpm.png',
+  'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/nextmove-recXWUjUgwS26HIuj.png',
+  'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/pinpoint-reco6Ys7nWU8RWf7m.png',
+  'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/proline-logo-recM5LCJ6omCJzS0g.png',
+  'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/sitemark-logo-recr9fsEK43RqqITU.png',
+  'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/Waveless-logo-recc8dyXMtZC2sJ8h.png',
+]
+
+function BrandSlider() {
+  return (
+    <div className="w-full overflow-hidden py-5">
+      <motion.div
+        className="flex w-max"
+        initial={{ x: 0 }}
+        animate={{ x: '-100%' }} // Move all the way left
+        transition={{
+          repeat: Infinity,
+          duration: 50, // Adjust speed
+          ease: 'linear',
+        }}
+      >
+        {[...logos, ...logos].map((logo, index) => (
+          <Image
+            key={index}
+            src={logo}
+            width={200}
+            height={200}
+            alt="Brand Logo"
+            className="mx-5"
+          />
+        ))}
+      </motion.div>
+    </div>
+  )
+}
+
+function ReviewCard({ reviews, special, timeout }: any) {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % reviews.length)
+    }, timeout) // Change review every 4 seconds
+
+    return () => clearInterval(interval)
+  }, [reviews.length])
+
   return (
     <section
       style={{
@@ -482,26 +620,35 @@ function ReviewCard({
         backgroundPosition: 'right',
         backgroundSize: 'contain',
       }}
-      className="rounded-tr-4xl rounded-bl-4xl w-[300px] p-10 bg-white flex flex-col gap-10 shadow-2xl"
+      className="relative overflow-hidden rounded-tr-4xl rounded-bl-4xl w-[300px] p-10 bg-white flex flex-col gap-10 shadow-2xl"
     >
-      <p>"{review}"</p>
-      <div className="flex gap-6">
-        <Image
-          src={src}
-          width={50}
-          height={50}
-          alt="user"
-          className="rounded-full"
-        />
-        <div>
-          <p
-            className={`${rajdhani.className} text-xl font-bold text-[#003342]`}
-          >
-            {name}
-          </p>
-          <p className="text-[#333b]">{occupation}</p>
-        </div>
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={index} // Ensure Framer Motion knows this is a new review
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -50 }}
+          transition={{ duration: 0.6, ease: 'easeInOut' }}
+          className="flex flex-col gap-10"
+        >
+          <p>"{reviews[index].review}"</p>
+          <div className="flex gap-6">
+            <Image
+              src={reviews[index].src}
+              width={50}
+              height={50}
+              alt="user"
+              className="rounded-full"
+            />
+            <div>
+              <p className="text-xl font-bold text-[#003342]">
+                {reviews[index].name}
+              </p>
+              <p className="text-[#333b]">{reviews[index].occupation}</p>
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </section>
   )
 }
