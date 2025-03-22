@@ -3,7 +3,11 @@ import { FaPhone } from 'react-icons/fa'
 import { IoIosPlay } from 'react-icons/io'
 import FancyBtn from './FancyBtn'
 import FancyTxt from './FancyTxt'
-import { rajdhani } from '@/app/page'
+import { Rajdhani } from 'next/font/google'
+const rajdhani = Rajdhani({
+  weight: ['400', '700', '600'],
+  subsets: ['latin'],
+})
 
 export default function Hero() {
   return (

@@ -2,7 +2,11 @@ import Image from 'next/image'
 import { FaPlay } from 'react-icons/fa'
 import FancyBtn from './FancyBtn'
 import Divider from './Divider'
-import { rajdhani } from '@/app/page'
+import { Rajdhani } from 'next/font/google'
+const rajdhani = Rajdhani({
+  weight: ['400', '700', '600'],
+  subsets: ['latin'],
+})
 
 export default function SlideSections() {
   return (

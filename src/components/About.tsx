@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import FancyBtn from './FancyBtn'
-import { rajdhani } from '@/app/page'
+import { Rajdhani } from 'next/font/google'
+const rajdhani = Rajdhani({
+  weight: ['400', '700', '600'],
+  subsets: ['latin'],
+})
 
 export default function About() {
   return (

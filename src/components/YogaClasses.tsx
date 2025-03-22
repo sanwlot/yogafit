@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import FancyTxt from './FancyTxt'
 import FancyBtn from './FancyBtn'
-import { rajdhani } from '@/app/page'
+import { Rajdhani } from 'next/font/google'
+const rajdhani = Rajdhani({
+  weight: ['400', '700', '600'],
+  subsets: ['latin'],
+})
 
 export default function YogaClasses() {
   return (

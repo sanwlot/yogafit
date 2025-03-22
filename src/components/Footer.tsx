@@ -9,7 +9,11 @@ import {
 } from 'react-icons/fa'
 import { FaLocationDot, FaXTwitter } from 'react-icons/fa6'
 import Divider from './Divider'
-import { rajdhani } from '@/app/page'
+import { Rajdhani } from 'next/font/google'
+const rajdhani = Rajdhani({
+  weight: ['400', '700', '600'],
+  subsets: ['latin'],
+})
 
 export default function Footer() {
   return (

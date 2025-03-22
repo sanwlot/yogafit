@@ -1,11 +1,15 @@
 'use client'
 
-import { rajdhani } from '@/app/page'
 import Image from 'next/image'
 import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoIosArrowDown } from 'react-icons/io'
 import { IoClose } from 'react-icons/io5'
+import { Rajdhani } from 'next/font/google'
+const rajdhani = Rajdhani({
+  weight: ['400', '700', '600'],
+  subsets: ['latin'],
+})
 
 export default function Header() {
   const [showPagesNav, setShowPagesNav] = useState(false)
