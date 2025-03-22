@@ -4,6 +4,8 @@ import { IoIosPlay } from 'react-icons/io'
 import FancyBtn from './FancyBtn'
 import FancyTxt from './FancyTxt'
 import { Rajdhani } from 'next/font/google'
+import { motion } from 'framer-motion'
+
 const rajdhani = Rajdhani({
   weight: ['400', '700', '600'],
   subsets: ['latin'],
@@ -17,7 +19,12 @@ export default function Hero() {
       }}
     >
       <div className="flex items-center flex-wrap md:flex-nowrap justify-around mb-30">
-        <div className="bg-[#d9acf59a] w-full md:w-xs xl:h-40 xl:w-2xs m-5 p-3 rounded-tr-3xl rounded-bl-3xl flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 400 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.4, ease: 'easeOut' }}
+          className="bg-[#d9acf59a] w-full md:w-xs xl:h-40 xl:w-2xs m-5 p-3 rounded-tr-3xl rounded-bl-3xl flex items-center justify-center"
+        >
           <div className="relative bottom-20 left-0">
             <Image
               src="/images/yoga-girl-in-warrior-pose-indoor.png"
@@ -34,7 +41,7 @@ export default function Hero() {
           <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center text-2xl p-2">
             <IoIosPlay />
           </div>
-        </div>
+        </motion.div>
 
         <div className="relative">
           <Image
@@ -44,16 +51,37 @@ export default function Hero() {
             alt="logo"
             className="mb-4"
           />
-          <Image
+          <motion.img
             src="/images/young-woman-practicing-yoga.png"
             width={300}
             height={400}
-            alt="young woman practicing yogar"
-            className="mb-4 absolute left-0 top-0 float-animation "
+            alt="young woman practicing yoga"
+            initial={{ opacity: 0, y: 100 }} // Start from lower position
+            animate={{ opacity: 1, y: 0 }} // Move up smoothly
+            transition={{ duration: 1.5, ease: 'easeOut' }} // Smoother transition
+            className="mb-4 absolute left-0 top-0"
           />
+          {/* <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, ease: 'easeOut' }}
+          >
+            <Image
+              src="/images/young-woman-practicing-yoga.png"
+              width={300}
+              height={400}
+              alt="young woman practicing yogar"
+              className="mb-4 absolute left-0 top-0 float-animation "
+            />
+          </motion.div> */}
         </div>
 
-        <div className="w-[400px]">
+        <motion.div
+          initial={{ opacity: 0, y: 180 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="w-[400px]"
+        >
           <div className="mb-10 mt-40 xl-mt-0">
             <p>
               A yoga and meditation teacher is a professional who has in-depth
@@ -76,11 +104,16 @@ export default function Hero() {
               <FancyTxt>Contact Us</FancyTxt>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="flex items-center flex-wrap justify-center gap-10 xl:py-40 text-center">
-        <div className="w-[300px] flex justify-center items-center flex-col gap-5">
+        <motion.div
+          initial={{ opacity: 0, y: 180 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          className="w-[300px] flex justify-center items-center flex-col gap-5"
+        >
           <div className="relative">
             <div className=" bg-[#d9acf59a] w-[120px] h-[120px] rounded-full"></div>
             <Image
@@ -101,8 +134,13 @@ export default function Hero() {
           <a href="#" className="text-[#18CBE4] flex items-center gap-2 ">
             <FancyTxt>Lear More</FancyTxt>
           </a>
-        </div>
-        <div className="w-[300px] flex justify-center items-center flex-col gap-5">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 180 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="w-[300px] flex justify-center items-center flex-col gap-5"
+        >
           <div className="relative">
             <div className=" bg-[#d9acf59a] w-[120px] h-[120px] rounded-full"></div>
             <Image
@@ -123,8 +161,13 @@ export default function Hero() {
           <a href="#" className="text-[#18CBE4] flex items-center gap-2 ">
             <FancyTxt>Lear More</FancyTxt>
           </a>
-        </div>
-        <div className="w-[300px] flex justify-center items-center flex-col gap-5">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 180 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+          className="w-[300px] flex justify-center items-center flex-col gap-5"
+        >
           <div className="relative">
             <div className=" bg-[#d9acf59a] w-[120px] h-[120px] rounded-full"></div>
             <Image
@@ -145,7 +188,7 @@ export default function Hero() {
           <a href="#" className="text-[#18CBE4] flex items-center gap-2 ">
             <FancyTxt>Lear More</FancyTxt>
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

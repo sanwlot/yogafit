@@ -10,6 +10,8 @@ import {
 import { FaLocationDot, FaXTwitter } from 'react-icons/fa6'
 import Divider from './Divider'
 import { Rajdhani } from 'next/font/google'
+import { motion } from 'framer-motion'
+
 const rajdhani = Rajdhani({
   weight: ['400', '700', '600'],
   subsets: ['latin'],
@@ -21,16 +23,31 @@ export default function Footer() {
       <section className="flex flex-wrap lg:flex-nowrap justify-center items-center py-20 px-5 gap-10">
         {/* Left Content */}
         <div className="xl:p-30 p-10 flex flex-col gap-6 justify-center items-start max-w-lg">
-          <h1
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: 'easeOut' }}
             className={`${rajdhani.className} text-5xl font-bold leading-tight`}
           >
             Our Latest Articles
-          </h1>
-          <FancyBtn href="#">View More</FancyBtn>
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+          >
+            <FancyBtn href="#">View More</FancyBtn>
+          </motion.div>
         </div>
 
         {/* Featured Article */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           style={{
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
             backgroundImage:
@@ -45,10 +62,16 @@ export default function Footer() {
             The Science Behind Yoga: How It Affects Your Brain And Body
           </p>
           <p className="opacity-80">April 25, 2023</p>
-        </div>
+        </motion.div>
 
         {/* Other Articles */}
-        <div className="flex flex-col gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          className="flex flex-col gap-8"
+        >
           {[
             {
               img: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/portrait-of-attractive-blonde-hair-young-woman-exercise-yoga-outdoor--e1682387007214.jpg',
@@ -86,7 +109,7 @@ export default function Footer() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* <div className="-m-56">

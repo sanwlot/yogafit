@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import FancyBtn from './FancyBtn'
 import { Rajdhani } from 'next/font/google'
+import { motion } from 'framer-motion'
+
 const rajdhani = Rajdhani({
   weight: ['400', '700', '600'],
   subsets: ['latin'],
@@ -27,7 +29,12 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="relative xl:w-1/2 flex flex-col gap-6 justify-start items-start mt-[50px] m-10">
+      <motion.div
+        initial={{ opacity: 0, y: 180 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="relative xl:w-1/2 flex flex-col gap-6 justify-start items-start mt-[50px] m-10"
+      >
         <h2 className={`${rajdhani.className}  font-bold text-4xl`}>
           Connecting Mind, Body, and Spirit through
         </h2>
@@ -70,7 +77,7 @@ export default function About() {
           </div>
         </div>
         <FancyBtn href={'#'}>About Us</FancyBtn>
-      </div>
+      </motion.div>
     </section>
   )
 }

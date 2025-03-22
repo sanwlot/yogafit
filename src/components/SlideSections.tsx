@@ -4,6 +4,8 @@ import FancyBtn from './FancyBtn'
 import Divider from './Divider'
 import { Rajdhani } from 'next/font/google'
 import { FaXTwitter } from 'react-icons/fa6'
+import { motion } from 'framer-motion'
+
 const rajdhani = Rajdhani({
   weight: ['400', '700', '600'],
   subsets: ['latin'],
@@ -14,51 +16,96 @@ export default function SlideSections() {
     <div className="bg-cyan-50">
       <section className="xl:sticky left-0 top-0 p-10 flex justify-center flex-wrap xl:flex-nowrap items-center gap-2">
         <div className="flex flex-col gap-5 p-10">
-          <h1 className={`${rajdhani.className} text-5xl font-bold`}>
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }} // Starts deep below
+            whileInView={{ opacity: 1, y: 0 }} // Animates when in view
+            viewport={{ once: true }} // Ensures animation happens only once
+            transition={{ duration: 0.7, ease: 'easeOut' }} // Smooth transition
+            className={`${rajdhani.className} text-5xl font-bold`}
+          >
             Trusted by Thousands Clients
-          </h1>
-          <p className="max-w-[420px]">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 300 }} // Starts deep below
+            whileInView={{ opacity: 1, y: 0 }} // Animates when in view
+            viewport={{ once: true }} // Ensures animation happens only once
+            transition={{ duration: 1, ease: 'easeOut' }} // Smooth transition
+            className="max-w-[420px]"
+          >
             Donec pede justo fringilla vel aliquet. nec vulputate eget arcu In
             enim justo.
-          </p>
+          </motion.p>
           <div className="flex flex-wrap gap-5">
-            <div className="flex ">
-              <Image
-                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/front-view-looking-at-camera-young-woman-farmer-in-a-garden-with-trees-stands-smiling-brunette--e1681372418107-768x768.jpg"
-                width={60}
-                height={60}
-                alt="user"
-                className="rounded-full -ml-2 ring-4 ring-cyan-50"
-              />
-              <Image
-                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/mid-adult-man-in-office-arms-folded-looking-at-camera-smiling-e1681372704313-768x768.jpg"
-                width={60}
-                height={60}
-                alt="user"
-                className="rounded-full -ml-2 ring-4 ring-cyan-50"
-              />
-              <Image
-                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/young-happy-woman-at-refrigerated-section-of-supermarket-looking-at-camera--e1681373784115.jpg"
-                width={60}
-                height={60}
-                alt="user"
-                className="rounded-full -ml-2 ring-4 ring-cyan-50"
-              />
-              <Image
-                src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/outdoor-portrait-of-african-american-man-with-crossed-arms-looking-at-camera-e1681376874850.jpg"
-                width={60}
-                height={60}
-                alt="user"
-                className="rounded-full -ml-2 ring-4 ring-cyan-50"
-              />
+            <div className="flex">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+              >
+                <Image
+                  src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/front-view-looking-at-camera-young-woman-farmer-in-a-garden-with-trees-stands-smiling-brunette--e1681372418107-768x768.jpg"
+                  width={60}
+                  height={60}
+                  alt="user"
+                  className="rounded-full -ml-2 ring-4 ring-cyan-50"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: 'easeOut' }}
+              >
+                <Image
+                  src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/mid-adult-man-in-office-arms-folded-looking-at-camera-smiling-e1681372704313-768x768.jpg"
+                  width={60}
+                  height={60}
+                  alt="user"
+                  className="rounded-full -ml-2 ring-4 ring-cyan-50"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.5, ease: 'easeOut' }}
+              >
+                <Image
+                  src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/young-happy-woman-at-refrigerated-section-of-supermarket-looking-at-camera--e1681373784115.jpg"
+                  width={60}
+                  height={60}
+                  alt="user"
+                  className="rounded-full -ml-2 ring-4 ring-cyan-50"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 2, ease: 'easeOut' }}
+              >
+                <Image
+                  src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/outdoor-portrait-of-african-american-man-with-crossed-arms-looking-at-camera-e1681376874850.jpg"
+                  width={60}
+                  height={60}
+                  alt="user"
+                  className="rounded-full -ml-2 ring-4 ring-cyan-50"
+                />
+              </motion.div>
             </div>
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: 'easeOut' }}
+            >
               <p className="text-3xl">
-                <span>5k</span>{' '}
+                <span>5k</span>
                 <span className="font-bold text-[#18CBE4]">+</span>
               </p>
               <span className="text-[#333]">Happy Clients</span>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -89,14 +136,26 @@ export default function SlideSections() {
           />
         </div>
       </section>
+
       <section className="bg-white xl:sticky left-0 top-0 z-10 pt-1">
-        <h1
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
           className={`${rajdhani.className} text-center text-5xl font-bold my-20`}
         >
           Our Yoga Instructors
-        </h1>
+        </motion.h1>
+
         <div className="flex flex-wrap justify-center gap-30 p-10">
-          <div className="group relative w-[300px] text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 300 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="group relative w-[300px] text-center"
+          >
             <Image
               src="/images/logo-big.png"
               width={300}
@@ -132,8 +191,15 @@ export default function SlideSections() {
               </p>
               <p className="text-[#18CBE4]">Yoga Instructor</p>
             </div>
-          </div>
-          <div className="group relative w-[300px] text-center">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 300 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+            className="group relative w-[300px] text-center"
+          >
             <Image
               src="/images/logo-big.png"
               width={300}
@@ -167,8 +233,15 @@ export default function SlideSections() {
               </p>
               <p className="text-[#18CBE4]">Yoga Instructor</p>
             </div>
-          </div>
-          <div className="group relative w-[300px] text-center">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 300 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 2, ease: 'easeOut' }}
+            className="group relative w-[300px] text-center"
+          >
             <Image
               src="/images/logo-big.png"
               width={300}
@@ -202,9 +275,10 @@ export default function SlideSections() {
               </p>
               <p className="text-[#18CBE4]">Yoga Instructor</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
+
       <section className="bg-white xl:sticky left-0 top-0 z-20 xl:px-30 px-5 pt-5 h-screen">
         <Image
           src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/Group-4.png"
@@ -216,13 +290,25 @@ export default function SlideSections() {
         <div className="bg-[#d9acf54f] p-10 rounded-tr-4xl rounded-bl-4xl">
           <div className="flex flex-wrap justify-between">
             <div className="flex flex-col justify-start gap-10">
-              <p className={`${rajdhani.className} text-3xl font-bold`}>
+              <motion.p
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+                className={`${rajdhani.className} text-3xl font-bold`}
+              >
                 Yogafit Working Hour
-              </p>
-              <p className="text-[#333333b0] max-w-[400px]">
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.9, ease: 'easeOut' }}
+                className="text-[#333333b0] max-w-[400px]"
+              >
                 Donec pede justo fringilla. aliquet nec vulputate eget arcu In
                 enim justo.
-              </p>
+              </motion.p>
               <div className="flex flex-col gap-4 font-bold max-w-[450px]">
                 <div className="flex justify-between gap-3 items-center">
                   <span className="max-w-[300px]">Monday - Friday</span>
@@ -241,7 +327,13 @@ export default function SlideSections() {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 2, ease: 'easeOut' }}
+              className="relative"
+            >
               <Image
                 src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/people-doing-yoga-on-the-beach-e1681803021989.jpg"
                 width={600}
@@ -252,10 +344,16 @@ export default function SlideSections() {
               <div className="hidden rounded-tr-4xl cursor-pointer xl:grid place-content-center absolute left-0 bottom-30 w-20 h-20 bg-white transition-all duration-500 ease-in-out hover:bg-[#18CBE4] hover:text-white">
                 <FaPlay />
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="flex items-center justify-between -mt-[60px]">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="flex items-center justify-between -mt-[60px]"
+          >
             <p className="text-2xl font-bold">This Yoga Support by</p>
             <div className="flex overflow-hidden w-[75%]">
               <Image
@@ -308,19 +406,36 @@ export default function SlideSections() {
                 className=""
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
+
       <section className="bg-teal-950 relative xl:sticky left-0 top-0 z-30 flex flex-wrap justify-between items-center p-10 pb-0 xl:p-30 xl:h-[70vh]">
         <div className="text-white flex justify-center flex-col gap-10 items-start mb-20">
-          <h1
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             className={`${rajdhani.className} xl:text-5xl text-2xl xl:leading-14 font-bold max-w-[550px]`}
           >
             Want to Improve Your Well-Being? Start With a Free Class Today!
-          </h1>
-          <FancyBtn href="#">Get a Free Class</FancyBtn>
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: 'easeOut' }}
+          >
+            <FancyBtn href="#">Get a Free Class</FancyBtn>
+          </motion.div>
         </div>
-        <div>
+        <motion.div
+          initial={{ opacity: 1, x: 500 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 3, ease: 'easeOut' }}
+        >
           <Image
             src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/cheerful-young-woman-with-yoga-NPYKHGK.png"
             width={500}
@@ -328,7 +443,7 @@ export default function SlideSections() {
             alt=""
             className="xl:relative xl:bottom-50 bottom-0 xl:h-[625px]"
           />
-        </div>
+        </motion.div>
       </section>
     </div>
   )
