@@ -115,6 +115,7 @@ export default function SlideSections() {
             name="Alex Peterson"
             occupation="Web Developer"
             src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/mid-adult-man-in-office-arms-folded-looking-at-camera-smiling-e1681372704313-150x150.jpg"
+            special
           />
           <ReviewCard
             review="Yoga has become a form of self-expression for me, allowing me to move my body in ways that feel natural and freeing."
@@ -462,11 +463,27 @@ interface ReviewCardProps {
   src: string
   name: string
   occupation: string
+  special?: boolean
 }
 
-function ReviewCard({ review, src, name, occupation }: ReviewCardProps) {
+function ReviewCard({
+  review,
+  src,
+  name,
+  occupation,
+  special,
+}: ReviewCardProps) {
   return (
-    <section className="rounded-tr-4xl rounded-bl-4xl w-[300px] p-10 bg-white flex flex-col gap-10 shadow-2xl">
+    <section
+      style={{
+        backgroundImage: special ? "url('/images/pattern.png')" : '',
+        backgroundColor: special ? '#d9acf59a' : 'white',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'right',
+        backgroundSize: 'contain',
+      }}
+      className="rounded-tr-4xl rounded-bl-4xl w-[300px] p-10 bg-white flex flex-col gap-10 shadow-2xl"
+    >
       <p>"{review}"</p>
       <div className="flex gap-6">
         <Image
