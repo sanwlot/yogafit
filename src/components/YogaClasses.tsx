@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import FancyTxt from './FancyTxt'
 import FancyBtn from './FancyBtn'
+import { rajdhani } from '@/app/page'
 
 export default function YogaClasses() {
   return (
-    <section className="mt-40 flex items-center gap-7 flex-wrap p-10">
+    <section className="mt-40 flex items-center justify-center xl:justify-start gap-7 flex-wrap xl:p-10 mb-20">
       <div className="mr-80"></div>
       <Card
         title="Hatha Yoga Class"
@@ -60,7 +61,9 @@ function Card({
         </div>
       </div>
       <div className="flex flex-col items-center gap-5 justify-center p-5 text-center mt-[-50px]">
-        <h2 className="text-3xl font-bold w-[250px]">{title}</h2>
+        <h2 className={`${rajdhani.className} text-3xl font-bold w-[250px]`}>
+          {title}
+        </h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit, tempor sed do
           eiusmod.
@@ -82,7 +85,9 @@ function ExtraCard() {
           alt="logo"
           className="m-auto"
         />
-        <h2 className="text-3xl font-bold">Our Yoga Class</h2>
+        <h2 className={`${rajdhani.className} text-3xl font-bold`}>
+          Our Yoga Class
+        </h2>
         <p className="mb-5">
           Donec pede justo fringilla vel aliquet nec vulputate eget.
         </p>

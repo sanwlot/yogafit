@@ -2,20 +2,21 @@ import Image from 'next/image'
 import { FaPlay } from 'react-icons/fa'
 import FancyBtn from './FancyBtn'
 import Divider from './Divider'
+import { rajdhani } from '@/app/page'
 
 export default function SlideSections() {
   return (
     <div className="bg-cyan-50">
-      <section className="sticky left-0 top-0 p-10 flex justify-center items-center gap-2">
-        <div className="flex flex-col gap-7 p-20">
-          <h1 className="text-5xl w-[420px] font-bold">
+      <section className="xl:sticky left-0 top-0 p-10 flex justify-center flex-wrap xl:flex-nowrap items-center gap-2">
+        <div className="flex flex-col gap-5 p-10">
+          <h1 className={`${rajdhani.className} text-5xl font-bold`}>
             Trusted by Thousands Clients
           </h1>
-          <p className="w-[420px]">
+          <p className="max-w-[420px]">
             Donec pede justo fringilla vel aliquet. nec vulputate eget arcu In
             enim justo.
           </p>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5">
             <div className="flex ">
               <Image
                 src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/front-view-looking-at-camera-young-woman-farmer-in-a-garden-with-trees-stands-smiling-brunette--e1681372418107-768x768.jpg"
@@ -83,11 +84,13 @@ export default function SlideSections() {
           />
         </div>
       </section>
-      <section className="bg-white sticky left-0 top-0 z-10 pt-1">
-        <h1 className="text-center text-5xl font-bold my-20">
+      <section className="bg-white xl:sticky left-0 top-0 z-10 pt-1">
+        <h1
+          className={`${rajdhani.className} text-center text-5xl font-bold my-20`}
+        >
           Our Yoga Instructors
         </h1>
-        <div className="flex justify-center gap-30 p-10">
+        <div className="flex flex-wrap justify-center gap-30 p-10">
           <div className="relative w-[300px] text-center">
             <Image
               src="/images/logo-big.png"
@@ -104,7 +107,9 @@ export default function SlideSections() {
               className="mb-4 absolute left-0 top-0"
             />
             <div className="flex flex-col gap-2.5">
-              <p className="mt-10 text-2xl font-bold">Jessica Hobs</p>
+              <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
+                Jessica Hobs
+              </p>
               <p className="text-[#18CBE4]">Yoga Instructor</p>
             </div>
           </div>
@@ -124,7 +129,9 @@ export default function SlideSections() {
               className="mb-4 absolute left-0 top-0"
             />
             <div className="flex flex-col gap-2.5">
-              <p className="mt-10 text-2xl font-bold">Christina Rose</p>
+              <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
+                Christina Rose
+              </p>
               <p className="text-[#18CBE4]">Yoga Instructor</p>
             </div>
           </div>
@@ -144,43 +151,47 @@ export default function SlideSections() {
               className="mb-4 absolute left-0 top-0"
             />
             <div className="flex flex-col gap-2.5">
-              <p className="mt-10 text-2xl font-bold">Hanny Wesley</p>
+              <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
+                Hanny Wesley
+              </p>
               <p className="text-[#18CBE4]">Yoga Instructor</p>
             </div>
           </div>
         </div>
       </section>
-      <section className="bg-white sticky left-0 top-0 z-20 px-30 pt-5 h-screen">
+      <section className="bg-white xl:sticky left-0 top-0 z-20 xl:px-30 px-5 pt-5 h-screen">
         <Image
           src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/Group-4.png"
           width={100}
           height={100}
           alt=""
-          className=" relative -left-25"
+          className=" relative -left-25 hidden xl:block"
         />
-        <div className="bg-[#d9acf54f]  p-10 rounded-tr-4xl rounded-bl-4xl">
-          <div className="flex justify-between">
+        <div className="bg-[#d9acf54f] p-10 rounded-tr-4xl rounded-bl-4xl">
+          <div className="flex flex-wrap justify-between">
             <div className="flex flex-col justify-start gap-10">
-              <p className="text-3xl font-bold">Yogafit Working Hour</p>
-              <p className="text-[#333333b0] w-[400px]">
+              <p className={`${rajdhani.className} text-3xl font-bold`}>
+                Yogafit Working Hour
+              </p>
+              <p className="text-[#333333b0] max-w-[400px]">
                 Donec pede justo fringilla. aliquet nec vulputate eget arcu In
                 enim justo.
               </p>
-              <div className="flex flex-col gap-4 font-bold w-[450px]">
+              <div className="flex flex-col gap-4 font-bold max-w-[450px]">
                 <div className="flex justify-between gap-3 items-center">
-                  <span className="w-[300px]">Monday - Friday</span>
+                  <span className="max-w-[300px]">Monday - Friday</span>
                   <Divider />
-                  <span className="w-[250px]">09.00 - 20.00</span>
+                  <span className="max-w-[250px]">09.00 - 20.00</span>
                 </div>
                 <div className="flex justify-between gap-3 items-center">
                   <span className="">Saturday</span>
                   <Divider />
-                  <span className="w-[250px]">09.00 - 19.00</span>
+                  <span className="max-w-[250px]">09.00 - 19.00</span>
                 </div>
                 <div className="flex justify-between gap-3 items-center">
                   <span>Sunday</span>
                   <Divider />
-                  <span className="w-[250px] ">09.00 - 15.00</span>
+                  <span className="max-w-[250px] ">09.00 - 15.00</span>
                 </div>
               </div>
             </div>
@@ -190,9 +201,9 @@ export default function SlideSections() {
                 width={600}
                 height={600}
                 alt=""
-                className="relative bottom-30 rounded-tl-4xl rounded-br-4xl"
+                className="xl:relative mt-10 xl:mt-0 xl:block min-w-[280px] bottom-30 rounded-tl-4xl rounded-br-4xl"
               />
-              <div className="rounded-tr-4xl cursor-pointer grid place-content-center absolute left-0 bottom-30 w-20 h-20 bg-white">
+              <div className="hidden rounded-tr-4xl cursor-pointer xl:grid place-content-center absolute left-0 bottom-30 w-20 h-20 bg-white">
                 <FaPlay />
               </div>
             </div>
@@ -254,9 +265,11 @@ export default function SlideSections() {
           </div>
         </div>
       </section>
-      <section className="bg-teal-950 sticky left-0 top-0 z-30 flex justify-between items-center p-30 h-[60.2vh]">
-        <div className="text-white flex flex-col gap-10 items-start">
-          <h1 className="text-5xl leading-14 font-bold w-[550px]">
+      <section className="bg-teal-950 relative xl:sticky left-0 top-0 z-30 flex flex-wrap justify-between items-center p-10 pb-0 xl:p-30 xl:h-[70vh]">
+        <div className="text-white flex justify-center flex-col gap-10 items-start mb-20">
+          <h1
+            className={`${rajdhani.className} xl:text-5xl text-2xl xl:leading-14 font-bold max-w-[550px]`}
+          >
             Want to Improve Your Well-Being? Start With a Free Class Today!
           </h1>
           <FancyBtn href="#">Get a Free Class</FancyBtn>
@@ -267,7 +280,7 @@ export default function SlideSections() {
             width={500}
             height={100}
             alt=""
-            className="relative bottom-11"
+            className="xl:relative xl:bottom-50 bottom-0 xl:h-[625px]"
           />
         </div>
       </section>
@@ -295,7 +308,7 @@ function ReviewCard({ review, src, name, occupation }: ReviewCardProps) {
           className="rounded-full"
         />
         <div>
-          <p className="text-xl font-bold">{name}</p>
+          <p className={`${rajdhani.className} text-xl font-bold`}>{name}</p>
           <p className="text-[#333b]">{occupation}</p>
         </div>
       </div>

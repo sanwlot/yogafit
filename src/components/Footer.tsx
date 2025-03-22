@@ -2,80 +2,82 @@ import React from 'react'
 import FancyBtn from './FancyBtn'
 import Image from 'next/image'
 import {
-  FaAddressBook,
-  FaFacebook,
   FaFacebookSquare,
   FaInstagram,
-  FaLocationArrow,
-  FaMap,
-  FaPhone,
   FaPhoneAlt,
-  FaTwitterSquare,
   FaYoutube,
 } from 'react-icons/fa'
-import { FaLocationDot, FaX, FaXRay, FaXTwitter } from 'react-icons/fa6'
+import { FaLocationDot, FaXTwitter } from 'react-icons/fa6'
 import Divider from './Divider'
+import { rajdhani } from '@/app/page'
 
 export default function Footer() {
   return (
-    <footer className="sticky left-0 top-0 z-50">
-      <section className="flex gap-10 items-center py-20">
-        <div className="p-10 pr-0 flex flex-col gap-10 justify-center items-start">
-          <h1 className="text-5xl font-bold">Our Latest Articles</h1>
+    <footer className="md:sticky left-0 top-0 z-50">
+      <section className="flex flex-wrap lg:flex-nowrap justify-center items-center py-20 px-5 gap-10">
+        {/* Left Content */}
+        <div className="xl:p-30 p-10 flex flex-col gap-6 justify-center items-start max-w-lg">
+          <h1
+            className={`${rajdhani.className} text-5xl font-bold leading-tight`}
+          >
+            Our Latest Articles
+          </h1>
           <FancyBtn href="#">View More</FancyBtn>
         </div>
 
+        {/* Featured Article */}
         <div
           style={{
-            textShadow: '2px 2px #333',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
             backgroundImage:
               "url('https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/woman-doing-yoga-on-the-beach-e1681798498704.jpg')",
           }}
-          className="flex text-white p-10 flex-col justify-end bg-cover bg-center h-[480px] w-[350px] rounded-tr-4xl rounded-bl-4xl "
+          className="relative flex text-white p-10 flex-col justify-end bg-cover bg-center m-5 min-h-[400px] w-full md:h-[70vh] md:w-[30vw] rounded-tr-4xl rounded-bl-4xl shadow-lg"
         >
-          <p>News</p>
-          <p className="text-2xl">
+          <p className="text-[#18CBE4] font-semibold tracking-wide">News</p>
+          <p className={`${rajdhani.className} text-2xl font-bold`}>
             The Science Behind Yoga: How It Affects Your Brain And Body
           </p>
-          <p>April 25, 2023</p>
+          <p className="opacity-80">April 25, 2023</p>
         </div>
 
-        <div>
-          <div className="flex p-10 gap-5 justify-end items-center bg-cover bg-center ">
-            <Image
-              alt=""
-              width={300}
-              height={300}
-              src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/portrait-of-attractive-blonde-hair-young-woman-exercise-yoga-outdoor--e1682387007214.jpg"
-              className="rounded-tl-4xl rounded-br-4xl"
-            />
-
-            <div className="w-[300px] flex flex-col gap-2">
-              <p className="text-[#18CBE4]">News</p>
-              <p className="text-2xl">
-                The Science Behind Yoga: How It Affects Your Brain And Body
-              </p>
-              <p className="text-[#3333339c]">April 25, 2023</p>
+        {/* Other Articles */}
+        <div className="flex flex-col gap-8">
+          {[
+            {
+              img: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/portrait-of-attractive-blonde-hair-young-woman-exercise-yoga-outdoor--e1682387007214.jpg',
+              title:
+                'The Science Behind Yoga: How It Affects Your Brain And Body',
+              date: 'April 25, 2023',
+            },
+            {
+              img: 'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/shot-of-two-young-women-meditating-during-their-yoga-routine-on-the-beach-e1681977179490.jpg',
+              title: 'Yoga Flow: Exploring the Benefits of Mindful Movement',
+              date: 'April 20, 2023',
+            },
+          ].map((article, index) => (
+            <div
+              key={index}
+              className="flex flex-wrap gap-5 items-center p-6 rounded-lg"
+            >
+              <Image
+                alt=""
+                width={300}
+                height={300}
+                src={article.img}
+                className="rounded-tl-4xl rounded-br-4xl object-cover transition-transform duration-300 hover:scale-105"
+              />
+              <div className="w-[300px] flex flex-col gap-2">
+                <p className="text-[#18CBE4] font-semibold tracking-wide">
+                  News
+                </p>
+                <p className={`${rajdhani.className} text-xl font-bold`}>
+                  {article.title}
+                </p>
+                <p className="text-gray-500">{article.date}</p>
+              </div>
             </div>
-          </div>
-
-          <div className="flex p-10 gap-5 justify-end items-center bg-cover bg-center ">
-            <Image
-              alt=""
-              width={300}
-              height={300}
-              src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/shot-of-two-young-women-meditating-during-their-yoga-routine-on-the-beach-e1681977179490.jpg"
-              className="rounded-tl-4xl rounded-br-4xl"
-            />
-
-            <div className="w-[300px] flex flex-col gap-2">
-              <p className="text-[#18CBE4]">News</p>
-              <p className="text-2xl">
-                Yoga Flow: Exploring the Benefits of Mindful Movement
-              </p>
-              <p className="text-[#3333339c]">April 20, 2023</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -96,21 +98,23 @@ export default function Footer() {
         </svg>
       </div> */}
 
-      <section className="p-20">
+      <section className="xl:p-20 m-5">
         <div
           style={{
             backgroundImage: 'url("/images/pattern.png")',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'right',
           }}
-          className="mx-auto rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-center gap-12 p-20 max-w-[900px] bg-teal-950 text-white"
+          className="mx-auto rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-center gap-12 p-10 xl:p-20 max-w-[900px]  bg-teal-950 text-white"
         >
-          <h1 className="text-4xl w-[700px] mx-auto text-center">
+          <h1
+            className={`${rajdhani.className} text-4xl max-w-[700px] mx-auto text-center`}
+          >
             The Ultimate Resource For Yoga and Wellness. Subscribe Now!
           </h1>
           <div className="w-full flex justify-center">
             <input
-              className="bg-white text-black p-4 rounded-bl-xl w-[400px]"
+              className="bg-white text-black p-4 rounded-bl-xl max-w-[400px]"
               type="email"
               placeholder="Enter Your Email"
             />
@@ -122,11 +126,13 @@ export default function Footer() {
       </section>
 
       <section>
-        <div className="flex justify-between py-10 px-32 ">
+        <div className="flex flex-wrap justify-between py-10 xl:px-32 px-5">
           <div className="flex flex-col gap-5">
             <p className="font-bold text-[#18CBE4]">Contact Us</p>
-            <p className="text-4xl font-bold">hello@yogafit.com</p>
-            <div className="flex items-center gap-10">
+            <p className={`${rajdhani.className} text-4xl font-bold`}>
+              hello@yogafit.com
+            </p>
+            <div className="flex flex-wrap items-center gap-10">
               <p className="flex gap-2 items-center">
                 <FaLocationDot className="text-[#18CBE4]" />
                 <span className="text-[#33333391]">
@@ -140,11 +146,19 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <Image src="/images/logo.png" width={120} height={120} alt="logo" />
+            <Image
+              className="min-w-[100px]"
+              src="/images/logo.png"
+              width={120}
+              height={120}
+              alt="logo"
+            />
           </div>
         </div>
-        <div className="flex items-center  py-10 px-32">
-          <p className="text-[#33333391] w-[280px]">Follow our social media</p>
+        <div className="flex items-center  py-10 xl:px-32 px-5">
+          <p className="text-[#33333391] max-w-[280px]">
+            Follow our social media
+          </p>
           <Divider />
           <ul className="flex gap-2 text-xl ml-10 text-[#18CBE4] ">
             <li className="hover:text-[#4ba8b5] cursor-pointer">
@@ -163,7 +177,7 @@ export default function Footer() {
         </div>
       </section>
 
-      <section className="flex justify-between py-7 px-32 bg-teal-950 text-white">
+      <section className="flex w-screen justify-between py-7 xl:px-32 px-5 text-xs xl:text-lg text-center bg-teal-950 text-white">
         <p>Yoga, Meditation & Fitness replica developed by Ajay Sanwlot</p>
         <p>Copyright © 2025. All rights reserved.</p>
       </section>
