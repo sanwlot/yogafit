@@ -104,7 +104,7 @@ export default function SlideSections() {
               width={300}
               height={400}
               alt="young woman practicing yogar"
-              className="mb-4 absolute left-0 top-0"
+              className="mb-4 absolute left-0 top-0 float-animation"
             />
             <div className="flex flex-col gap-2.5">
               <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
@@ -126,7 +126,7 @@ export default function SlideSections() {
               width={300}
               height={400}
               alt="young woman practicing yogar"
-              className="mb-4 absolute left-0 top-0"
+              className="mb-4 absolute left-0 top-0 float-animation"
             />
             <div className="flex flex-col gap-2.5">
               <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
@@ -148,7 +148,7 @@ export default function SlideSections() {
               width={300}
               height={400}
               alt="young woman practicing yogar"
-              className="mb-4 absolute left-0 top-0"
+              className="mb-4 absolute left-0 top-0 float-animation"
             />
             <div className="flex flex-col gap-2.5">
               <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>

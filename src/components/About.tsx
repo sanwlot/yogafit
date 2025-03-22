@@ -19,7 +19,7 @@ export default function About() {
             alt="woman practicing yoga"
             width={500}
             height={500}
-            className="absolute left-0 top-0"
+            className="absolute left-0 top-0 left-right-animation"
           />
         </div>
       </div>

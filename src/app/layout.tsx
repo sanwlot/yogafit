@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
-import { Mulish } from 'next/font/google'
+import { Mulish, Rajdhani } from 'next/font/google'
 import './globals.css'
+
+export const rajdhani = Rajdhani({
+  weight: ['400', '700', '600'],
+  subsets: ['latin'],
+})
 
 const mulish = Mulish({
   subsets: ['latin'],

@@ -4,11 +4,7 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import SlideSections from '@/components/SlideSections'
 import YogaClasses from '@/components/YogaClasses'
-import { Rajdhani } from 'next/font/google'
-export const rajdhani = Rajdhani({
-  weight: ['400', '700', '600'],
-  subsets: ['latin'],
-})
+import { rajdhani } from './layout'
 
 export default function Home() {
   return (

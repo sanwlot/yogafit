@@ -45,7 +45,7 @@ export default function Hero() {
             width={300}
             height={400}
             alt="young woman practicing yogar"
-            className="mb-4 absolute left-0 top-0"
+            className="mb-4 absolute left-0 top-0 float-animation "
           />
         </div>
 
