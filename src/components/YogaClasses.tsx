@@ -26,7 +26,7 @@ export default function YogaClasses() {
         duration={1}
       />
       <Card
-        title="Ashtanga Yoga Class"
+        title="Ashtanga Yoga "
         cardImgSrc="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/group-of-diversity-yoga-sport-people-practice-with-their-coaching-in-yoga-class-1-e1681796064165.jpg"
         designImgSrc="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/Ashtanga-yoga-GG7EK9Q.png"
         duration={1.5}
@@ -80,7 +80,9 @@ function Card({
         </div>
       </div>
       <div className="flex flex-col items-center gap-5 justify-center p-5 text-center mt-[-50px]">
-        <h2 className={`${rajdhani.className} text-3xl font-bold w-[250px]`}>
+        <h2
+          className={`${rajdhani.className} text-[#003342] text-3xl font-bold w-[250px]`}
+        >
           {title}
         </h2>
         <p>
@@ -100,7 +102,7 @@ function ExtraCard() {
       whileInView={{ opacity: 1, y: 0 }} // Animates when in view
       viewport={{ once: true }} // Ensures animation happens only once
       transition={{ duration: 3, ease: 'easeOut' }} // Smooth transition
-      className="w-[300px] h-[500px] shadow-2xl rounded-bl-4xl rounded-tr-4xl bg-teal-950 grid place-content-center p-7"
+      className="w-[300px] h-[465px] shadow-2xl rounded-bl-4xl rounded-tr-4xl bg-teal-950 grid place-content-center p-7"
     >
       <div className="text-white text-center flex flex-col gap-4 justify-center items-center">
         <Image

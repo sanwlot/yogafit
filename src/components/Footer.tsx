@@ -28,7 +28,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: 'easeOut' }}
-            className={`${rajdhani.className} text-5xl font-bold leading-tight`}
+            className={`${rajdhani.className} text-[#003342] text-5xl font-bold leading-tight`}
           >
             Our Latest Articles
           </motion.h1>
@@ -101,7 +101,7 @@ export default function Footer() {
                   News
                 </p>
                 <p
-                  className={`${rajdhani.className} hover:text-[#18CBE4] text-xl font-bold`}
+                  className={`${rajdhani.className} hover:text-[#18CBE4] text-[#003342] text-xl font-bold`}
                 >
                   {article.title}
                 </p>
@@ -160,7 +160,9 @@ export default function Footer() {
         <div className="flex flex-wrap justify-between py-10 xl:px-32 px-5">
           <div className="flex flex-col gap-5">
             <p className="font-bold text-[#18CBE4]">Contact Us</p>
-            <p className={`${rajdhani.className} text-4xl font-bold`}>
+            <p
+              className={`${rajdhani.className} text-[#003342] text-4xl font-bold`}
+            >
               hello@yogafit.com
             </p>
             <div className="flex flex-wrap items-center gap-10">

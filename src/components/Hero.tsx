@@ -11,6 +11,25 @@ const rajdhani = Rajdhani({
   subsets: ['latin'],
 })
 
+function PlayButton() {
+  return (
+    <div className="relative flex items-center justify-center">
+      {/* Wave Effect */}
+      <motion.div
+        initial={{ scale: 1, opacity: 0.7 }}
+        animate={{ scale: 1.5, opacity: 0 }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeOut' }}
+        className="absolute w-16 h-16 rounded-full bg-[#d9acf59a]"
+      />
+
+      {/* Play Button */}
+      <div className="relative transition-all duration-500 fade-in-out cursor-pointer bg-white hover:bg-[#18CBE4] hover:text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl p-2 shadow-lg">
+        <IoIosPlay className="" />
+      </div>
+    </div>
+  )
+}
+
 export default function Hero() {
   return (
     <div
@@ -37,10 +56,10 @@ export default function Hero() {
               Get more than <strong>+30 videos</strong>
             </p>
           </div>
-
-          <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center text-2xl p-2">
+          <PlayButton />
+          {/* <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center text-2xl p-2">
             <IoIosPlay />
-          </div>
+          </div> */}
         </motion.div>
 
         <div className="relative">
@@ -59,21 +78,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: 100 }} // Start from lower position
             animate={{ opacity: 1, y: 0 }} // Move up smoothly
             transition={{ duration: 1.5, ease: 'easeOut' }} // Smoother transition
-            className="mb-4 absolute left-0 top-0"
+            className="mb-4 absolute left-0 top-0 float-animation"
           />
-          {/* <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2, ease: 'easeOut' }}
-          >
-            <Image
-              src="/images/young-woman-practicing-yoga.png"
-              width={300}
-              height={400}
-              alt="young woman practicing yogar"
-              className="mb-4 absolute left-0 top-0 float-animation "
-            />
-          </motion.div> */}
         </div>
 
         <motion.div
@@ -109,9 +115,10 @@ export default function Hero() {
 
       <div className="flex items-center flex-wrap justify-center gap-10 xl:py-40 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 180 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          initial={{ opacity: 0, y: 150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: 'easeOut' }}
           className="w-[300px] flex justify-center items-center flex-col gap-5"
         >
           <div className="relative">
@@ -124,7 +131,9 @@ export default function Hero() {
               className="absolute left-0 bottom-0 rounded-b-[400px]"
             />
           </div>
-          <h3 className={`${rajdhani.className} font-bold text-2xl`}>
+          <h3
+            className={`${rajdhani.className} text-[#003342] font-bold text-2xl`}
+          >
             Peace of Mind
           </h3>
           <p>
@@ -136,9 +145,10 @@ export default function Hero() {
           </a>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 180 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          initial={{ opacity: 0, y: 150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
           className="w-[300px] flex justify-center items-center flex-col gap-5"
         >
           <div className="relative">
@@ -151,7 +161,9 @@ export default function Hero() {
               className="absolute left-0 bottom-0 rounded-b-[400px]"
             />
           </div>
-          <h3 className={`${rajdhani.className} font-bold text-2xl`}>
+          <h3
+            className={`${rajdhani.className} text-[#003342] font-bold text-2xl`}
+          >
             Mental Health
           </h3>
           <p>
@@ -163,9 +175,10 @@ export default function Hero() {
           </a>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 180 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
+          initial={{ opacity: 0, y: 150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: 'easeOut' }}
           className="w-[300px] flex justify-center items-center flex-col gap-5"
         >
           <div className="relative">
@@ -178,7 +191,9 @@ export default function Hero() {
               className="absolute left-0 bottom-0 rounded-b-[400px]"
             />
           </div>
-          <h3 className={`${rajdhani.className} font-bold text-2xl`}>
+          <h3
+            className={`${rajdhani.className} text-[#003342] font-bold text-2xl`}
+          >
             Gain Flexability
           </h3>
           <p>

@@ -21,7 +21,7 @@ export default function SlideSections() {
             whileInView={{ opacity: 1, y: 0 }} // Animates when in view
             viewport={{ once: true }} // Ensures animation happens only once
             transition={{ duration: 0.7, ease: 'easeOut' }} // Smooth transition
-            className={`${rajdhani.className} text-5xl font-bold`}
+            className={`${rajdhani.className} text-5xl font-bold text-[#003342]`}
           >
             Trusted by Thousands Clients
           </motion.h1>
@@ -143,7 +143,7 @@ export default function SlideSections() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className={`${rajdhani.className} text-center text-5xl font-bold my-20`}
+          className={`${rajdhani.className} text-[#003342] text-center text-5xl font-bold my-20`}
         >
           Our Yoga Instructors
         </motion.h1>
@@ -186,7 +186,9 @@ export default function SlideSections() {
             </div>
 
             <div className="flex flex-col gap-2.5">
-              <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
+              <p
+                className={`${rajdhani.className} text-[#003342] mt-10 text-2xl font-bold`}
+              >
                 Jessica Hobs
               </p>
               <p className="text-[#18CBE4]">Yoga Instructor</p>
@@ -228,7 +230,9 @@ export default function SlideSections() {
               </ul>
             </div>
             <div className="flex flex-col gap-2.5">
-              <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
+              <p
+                className={`${rajdhani.className} text-[#003342] mt-10 text-2xl font-bold`}
+              >
                 Christina Rose
               </p>
               <p className="text-[#18CBE4]">Yoga Instructor</p>
@@ -270,7 +274,9 @@ export default function SlideSections() {
               </ul>
             </div>
             <div className="flex flex-col gap-2.5">
-              <p className={`${rajdhani.className} mt-10 text-2xl font-bold`}>
+              <p
+                className={`${rajdhani.className} text-[#003342] mt-10 text-2xl font-bold`}
+              >
                 Hanny Wesley
               </p>
               <p className="text-[#18CBE4]">Yoga Instructor</p>
@@ -279,7 +285,7 @@ export default function SlideSections() {
         </div>
       </section>
 
-      <section className="bg-white xl:sticky left-0 top-0 z-20 xl:px-30 px-5 pt-5 h-screen">
+      <section className="bg-white mb-20 xl:sticky left-0 top-0 z-20 xl:px-30 px-5 pt-5 h-screen">
         <Image
           src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/Group-4.png"
           width={100}
@@ -295,7 +301,7 @@ export default function SlideSections() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
-                className={`${rajdhani.className} text-3xl font-bold`}
+                className={`${rajdhani.className} text-3xl font-bold text-[#003342]`}
               >
                 Yogafit Working Hour
               </motion.p>
@@ -309,7 +315,7 @@ export default function SlideSections() {
                 Donec pede justo fringilla. aliquet nec vulputate eget arcu In
                 enim justo.
               </motion.p>
-              <div className="flex flex-col gap-4 font-bold max-w-[450px]">
+              <div className="text-[#003342] flex flex-col gap-4 font-bold max-w-[450px]">
                 <div className="flex justify-between gap-3 items-center">
                   <span className="max-w-[300px]">Monday - Friday</span>
                   <Divider />
@@ -352,9 +358,11 @@ export default function SlideSections() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="flex items-center justify-between -mt-[60px]"
+            className="flex items-center justify-between"
           >
-            <p className="text-2xl font-bold">This Yoga Support by</p>
+            <p className="xl:text-2xl text-lg font-bold text-[#003342]">
+              This Yoga Support by
+            </p>
             <div className="flex overflow-hidden w-[75%]">
               <Image
                 src="https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/snowflake-logo-recv2EQNlU3plB13W.png"
@@ -469,7 +477,11 @@ function ReviewCard({ review, src, name, occupation }: ReviewCardProps) {
           className="rounded-full"
         />
         <div>
-          <p className={`${rajdhani.className} text-xl font-bold`}>{name}</p>
+          <p
+            className={`${rajdhani.className} text-xl font-bold text-[#003342]`}
+          >
+            {name}
+          </p>
           <p className="text-[#333b]">{occupation}</p>
         </div>
       </div>

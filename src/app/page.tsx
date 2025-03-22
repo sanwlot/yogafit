@@ -23,7 +23,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 180 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className={`${rajdhani.className} max-w-[800px] mx-auto text-center text-5xl xl:text-6xl font-bold mb-20`}
+          className={`${rajdhani.className} max-w-[800px] text-[#003342] mx-auto text-center text-5xl xl:text-6xl font-bold mb-20`}
         >
           The Transformative Powers of Yoga and Meditation
         </motion.h1>

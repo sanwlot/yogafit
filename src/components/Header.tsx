@@ -6,6 +6,8 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoIosArrowDown } from 'react-icons/io'
 import { IoClose } from 'react-icons/io5'
 import { Rajdhani } from 'next/font/google'
+import { motion, AnimatePresence } from 'framer-motion'
+
 const rajdhani = Rajdhani({
   weight: ['400', '700', '600'],
   subsets: ['latin'],
@@ -27,132 +29,140 @@ export default function Header() {
         </div>
 
         {/* NAV */}
-        {showNav && (
-          <div className="fixed left-0 top-0 h-screen w-[320px] bg-white z-999 shadow-2xl">
-            <div className="flex justify-between items-center p-5">
-              <div className="">
-                <Image
-                  src="/images/logo.png"
-                  width={70}
-                  height={70}
-                  alt="logo"
-                />
+        <AnimatePresence>
+          {showNav && (
+            <motion.div
+              initial={{ x: '-100%' }} // Start off-screen
+              animate={{ x: '0%' }} // Slide in
+              exit={{ x: '-100%' }} // Slide out smoothly on exit
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              className="fixed left-0 top-0 h-screen w-[320px] bg-white z-999 shadow-2xl"
+            >
+              <div className="flex justify-between items-center p-5">
+                <div className="">
+                  <Image
+                    src="/images/logo.png"
+                    width={70}
+                    height={70}
+                    alt="logo"
+                  />
+                </div>
+                <div onClick={() => setShowNav(false)}>
+                  <IoClose className="text-3xl text-[#18CBE4] cursor-pointer" />
+                </div>
               </div>
-              <div onClick={() => setShowNav(false)}>
-                <IoClose className="text-3xl text-[#18CBE4] cursor-pointer" />
-              </div>
-            </div>
 
-            <ul className="flex flex-col justify-start items-start gap-7 p-7 text-xl">
-              <li>
-                <a href="#" className="text-[#18CBE4] font-bold">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:text-[#18CBE4] transition-all duration-500"
-                  href="#"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:text-[#18CBE4] transition-all duration-500"
-                  href="#"
-                >
-                  Classes
-                </a>
-              </li>
+              <ul className="flex flex-col justify-start items-start gap-7 p-7 text-xl">
+                <li>
+                  <a href="#" className="text-[#18CBE4] font-bold">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="hover:text-[#18CBE4] transition-all duration-500"
+                    href="#"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="hover:text-[#18CBE4] transition-all duration-500"
+                    href="#"
+                  >
+                    Classes
+                  </a>
+                </li>
 
-              <li className="relative">
-                <span
-                  onClick={() => {
-                    setShowPagesNav(!showPagesNav)
-                    setShowBlogNav(false)
-                  }}
-                  className="flex items-center gap-1 hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
-                >
-                  <span className={`${showPagesNav && 'text-[#18CBE4]'}`}>
-                    Pages
+                <li className="relative">
+                  <span
+                    onClick={() => {
+                      setShowPagesNav(!showPagesNav)
+                      setShowBlogNav(false)
+                    }}
+                    className="flex items-center gap-1 hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
+                  >
+                    <span className={`${showPagesNav && 'text-[#18CBE4]'}`}>
+                      Pages
+                    </span>
+                    <IoIosArrowDown />
                   </span>
-                  <IoIosArrowDown />
-                </span>
-                {showPagesNav && (
-                  <ul className="flex flex-col gap-5 w-[200px] p-5 bg-white">
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
-                      >
-                        Pricing
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
-                      >
-                        FAQ
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
-                      >
-                        404 Page
-                      </a>
-                    </li>
-                  </ul>
-                )}
-              </li>
-              <li>
-                <span
-                  onClick={() => {
-                    setShowBlogNav(!showBlogNav)
-                    setShowPagesNav(false)
-                  }}
-                  className="flex items-center gap-1 hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
-                >
-                  <span className={`${showBlogNav && 'text-[#18CBE4]'}`}>
-                    Blog
-                  </span>{' '}
-                  <IoIosArrowDown />
-                </span>
-                {showBlogNav && (
-                  <ul className="flex flex-col gap-5 w-[200px] p-5 bg-white">
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
-                      >
-                        Single Post
-                      </a>
-                    </li>
-                  </ul>
-                )}
-              </li>
-              <li>
-                <a
-                  className="hover:text-[#18CBE4] transition-all duration-500"
-                  href="#"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
+                  {showPagesNav && (
+                    <ul className="flex flex-col gap-5 w-[200px] p-5 bg-white">
+                      <li>
+                        <a
+                          href="#"
+                          className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
+                        >
+                          Pricing
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
+                        >
+                          FAQ
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
+                        >
+                          404 Page
+                        </a>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+                <li>
+                  <span
+                    onClick={() => {
+                      setShowBlogNav(!showBlogNav)
+                      setShowPagesNav(false)
+                    }}
+                    className="flex items-center gap-1 hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
+                  >
+                    <span className={`${showBlogNav && 'text-[#18CBE4]'}`}>
+                      Blog
+                    </span>{' '}
+                    <IoIosArrowDown />
+                  </span>
+                  {showBlogNav && (
+                    <ul className="flex flex-col gap-5 w-[200px] p-5 bg-white">
+                      <li>
+                        <a
+                          href="#"
+                          className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
+                        >
+                          Blog
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="hover:text-[#18CBE4] transition-all duration-500 cursor-pointer"
+                        >
+                          Single Post
+                        </a>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+                <li>
+                  <a
+                    className="hover:text-[#18CBE4] transition-all duration-500"
+                    href="#"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
 
       {/* desktop nav */}
