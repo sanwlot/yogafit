@@ -515,53 +515,6 @@ export default function SlideSections() {
   )
 }
 
-interface ReviewCardProps {
-  review: string
-  src: string
-  name: string
-  occupation: string
-  special?: boolean
-}
-
-// function ReviewCard({
-//   review,
-//   src,
-//   name,
-//   occupation,
-//   special,
-// }: ReviewCardProps) {
-//   return (
-//     <section
-//       style={{
-//         backgroundImage: special ? "url('/images/pattern.png')" : '',
-//         backgroundColor: special ? '#d9acf59a' : 'white',
-//         backgroundRepeat: 'no-repeat',
-//         backgroundPosition: 'right',
-//         backgroundSize: 'contain',
-//       }}
-//       className="rounded-tr-4xl rounded-bl-4xl w-[300px] p-10 bg-white flex flex-col gap-10 shadow-2xl"
-//     >
-//       <p>"{review}"</p>
-//       <div className="flex gap-6">
-//         <Image
-//           src={src}
-//           width={50}
-//           height={50}
-//           alt="user"
-//           className="rounded-full"
-//         />
-//         <div>
-//           <p
-//             className={`${rajdhani.className} text-xl font-bold text-[#003342]`}
-//           >
-//             {name}
-//           </p>
-//           <p className="text-[#333b]">{occupation}</p>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
 const logos = [
   'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/snowflake-logo-recv2EQNlU3plB13W.png',
   'https://templatekit.jegtheme.com/yogafit/wp-content/uploads/sites/367/2023/04/inspire-logo-recwek1xLvPBRvnpm.png',
