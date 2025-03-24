@@ -477,10 +477,10 @@ export default function SlideSections() {
       </section>
 
       <section className="bg-teal-950 relative xl:sticky left-0 top-0 z-30 flex flex-wrap justify-between items-center p-10 pb-0 xl:p-30 xl:h-[545px]">
-        <div className="text-white flex justify-center flex-col gap-10 items-start mb-20">
+        <div className="text-white flex justify-center flex-col gap-10 items-start mb-20 ">
           <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, translateX: 50 }}
+            whileInView={{ opacity: 1, translateX: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className={`${rajdhani.className} xl:text-5xl text-2xl xl:leading-14 font-bold max-w-[550px]`}
